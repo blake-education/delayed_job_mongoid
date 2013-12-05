@@ -7,11 +7,11 @@ module Delayed
     class ClearIdentityMap < Plugin
       callbacks do |lifecycle|
         lifecycle.before(:invoke_job) do |worker, &block|
-          Mongoid::IdentityMap.clear
+#          Mongoid::IdentityMap.clear
         end
       end
     end
   end
 end
 
-Delayed::Worker.plugins << Delayed::Plugins::ClearIdentityMap
+#Delayed::Worker.plugins << Delayed::Plugins::ClearIdentityMap
